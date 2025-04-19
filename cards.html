@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .grid-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 15px;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    .card img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      z-index: -1;
+      transition: background-color 0.5s ease;
+    }
+    .card h3,
+    .card p {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .card:hover::before {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .card:hover h3,
+    .card:hover p {
+      opacity: 1;
+    }
+    .card1::before {
+      background-color: rgba(30, 144, 255, 0.2);
+    }
+    .card1:hover::before {
+      background-color: rgba(30, 144, 255, 0.6);
+    }
+    .card2::before {
+      background-color: rgba(255, 99, 71, 0.2);
+    }
+    .card2:hover::before {
+      background-color: rgba(255, 99, 71, 0.6);
+    }
+    .card3::before {
+      background-color: rgba(60, 179, 113, 0.2);
+    }
+    .card3:hover::before {
+      background-color: rgba(60, 179, 113, 0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="card card1">
+      <img src=./unsplash_mtns.jpg alt="Mountains">
+      <h3>Climb the Mountains</h3>
+      <p>We have hundreds of peaks situated within a short drive of the city. Meet with a guide, plan your trip, and get out there!</p>
+    </div>
+    <div class="card card2">
+      <img src=./unsplash_city.jpg alt="City">
+      <h3>Explore the City</h3>
+      <p>The city is full of cultural centers, historic landmarks, interesting boutiques, and world-class restaurants. Take a look around!</p>
+    </div>
+    <div class="card card3">
+      <img src=./unsplash_forest.jpg alt="Forest">
+      <h3>Go for a Hike</h3>
+      <p>Our renowned, well-maintained hiking trails are situated throughout the nearby forests, but you can also go off the beaten path if that suits you!</p>
+    </div>
+  </div>
+</body>
+</html>
