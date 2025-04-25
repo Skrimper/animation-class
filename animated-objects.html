@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .animated-icons-container {
+        position: fixed; 
+        inset: 0; 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+    }
+    div {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: lime;
+        box-shadow: 0 0 10px hotpink(0,0,0,0.1);
+    }
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-50px); }
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.2); opacity: 0.7; }
+    }
+    .animated-icon-1 {
+        animation: bounce 2s infinite;
+    }
+    .animated-icon-2 {
+        animation: spin 3s linear infinite
+    }
+    .animated-icon-3 { 
+        animation: pulse 1.5s ease-in-out infinite;
+    }
+    </style>
+</head>
+<section class="animated-icons-container">
+    <div class="animated-icon-1">
+
+    </div>
+    <div class="animated-icon-2">
+
+    </div>
+    <div class="animated-icon-3">
+
+    </div>
+</section>
+</html>
